@@ -33,6 +33,7 @@ This will automatically restore all the dependencies.
 
 Once the dependencies are downloaded, run the following command in the package manager console:
 ```
+dotnet ef migrations add InitialCreat
 Update-Database
 ```
 This will run the SQL commands to setup the database. For different-different SQL servers change the connection string in AppSettings.
