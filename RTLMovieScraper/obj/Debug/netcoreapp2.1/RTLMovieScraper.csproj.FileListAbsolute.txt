@@ -1,0 +1,13 @@
+C:\Users\nisharma\source\repos\RTLMovieScraper\RTLMovieScraper\bin\Debug\netcoreapp2.1\RTLMovieScraper.deps.json
+C:\Users\nisharma\source\repos\RTLMovieScraper\RTLMovieScraper\bin\Debug\netcoreapp2.1\RTLMovieScraper.runtimeconfig.json
+C:\Users\nisharma\source\repos\RTLMovieScraper\RTLMovieScraper\bin\Debug\netcoreapp2.1\RTLMovieScraper.runtimeconfig.dev.json
+C:\Users\nisharma\source\repos\RTLMovieScraper\RTLMovieScraper\bin\Debug\netcoreapp2.1\RTLMovieScraper.dll
+C:\Users\nisharma\source\repos\RTLMovieScraper\RTLMovieScraper\obj\Debug\netcoreapp2.1\RTLMovieScraper.csproj.CoreCompileInputs.cache
+C:\Users\nisharma\source\repos\RTLMovieScraper\RTLMovieScraper\obj\Debug\netcoreapp2.1\RTLMovieScraper.RazorAssemblyInfo.cache
+C:\Users\nisharma\source\repos\RTLMovieScraper\RTLMovieScraper\obj\Debug\netcoreapp2.1\RTLMovieScraper.RazorAssemblyInfo.cs
+C:\Users\nisharma\source\repos\RTLMovieScraper\RTLMovieScraper\obj\Debug\netcoreapp2.1\RTLMovieScraper.AssemblyInfoInputs.cache
+C:\Users\nisharma\source\repos\RTLMovieScraper\RTLMovieScraper\obj\Debug\netcoreapp2.1\RTLMovieScraper.AssemblyInfo.cs
+C:\Users\nisharma\source\repos\RTLMovieScraper\RTLMovieScraper\obj\Debug\netcoreapp2.1\RTLMovieScraper.RazorTargetAssemblyInfo.cache
+C:\Users\nisharma\source\repos\RTLMovieScraper\RTLMovieScraper\bin\Debug\netcoreapp2.1\RTLMovieScraper.pdb
+C:\Users\nisharma\source\repos\RTLMovieScraper\RTLMovieScraper\obj\Debug\netcoreapp2.1\RTLMovieScraper.dll
+C:\Users\nisharma\source\repos\RTLMovieScraper\RTLMovieScraper\obj\Debug\netcoreapp2.1\RTLMovieScraper.pdb

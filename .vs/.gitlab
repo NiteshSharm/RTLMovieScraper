@@ -1,0 +1,13 @@
+{
+  "User": {
+    "Id": 70,
+    "Username": "NKSHARMA",
+    "Name": "nitesh sharma",
+    "Email": "nitesh.sharma@altran.com",
+    "AvatarUrl": "https://secure.gravatar.com/avatar/7537d5e77e2f0e37d79c6bfac8e43cf6?s=80&d=identicon",
+    "PrivateToken": "52c43e81436c7154b20e371c1b24c849a238cef4c6bc968bb59731ffc7b6186e",
+    "Host": "https://source.incubat.org",
+    "TwoFactorEnabled": false,
+    "ApiVersion": 3
+  }
+}
