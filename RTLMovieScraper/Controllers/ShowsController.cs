@@ -21,7 +21,7 @@ namespace RTLMovieScraper.Controllers
         }
         // GET api/shows
         /// <summary>
-        /// Returns the paginated list of TVShows
+        /// Returns the paginated list of TVShows. If no result then please execute "PUT api/shows" First
         /// </summary>
         /// <param name="PageNumber"></param>
         /// <param name="PageSize"></param>
@@ -29,16 +29,35 @@ namespace RTLMovieScraper.Controllers
         [HttpGet]
         public ActionResult<PagedList<TVShow>> Get([FromQuery] int? PageNumber, [FromQuery] int? PageSize)
         {
-            var query = _context.TVShow.Include(r => r.Casts).AsQueryable();
-            return new PagedList<TVShow>(
+            IQueryable<TVShow> query = _context.TVShow.Include(r => r.Casts).AsQueryable();
+            var paginatedList = new PagedList<TVShow>(
                 query, PageNumber, PageSize);
+            foreach (var show in paginatedList.List)
+            {
+                var sortedcast = show.Casts.OrderByDescending(x => x.birthday);
+                show.Casts = sortedcast.ToList();
+            }
+            return paginatedList;
         }
 
         // GET api/shows/5
+        /// <summary>
+        /// Search a specific Show by it's ID. 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
-        public ActionResult<TVShow> Get(int id)
+        public async Task<ActionResult<TVShow>> Get(int id)
         {
-            return _context.TVShow.Include(r => r.Casts).FirstOrDefault(m => m.id == id);
+            var resultFound= _context.TVShow.Include(r => r.Casts).FirstOrDefault(m => m.id == id);
+            if (resultFound != null)
+            {
+                resultFound.Casts = resultFound.Casts.OrderByDescending(x => x.birthday).ToList();
+                return resultFound;
+            }
+            else {
+                return await ApiHelpers.GetShowCastsbyIdAsync(id);
+            }
         }
 
         // PUT api/shows

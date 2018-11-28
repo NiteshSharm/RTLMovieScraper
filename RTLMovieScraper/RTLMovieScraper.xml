@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RTLMovieScraper</name>
+    </assembly>
+    <members>
+        <member name="M:RTLMovieScraper.Controllers.ShowsController.Get(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Returns the paginated list of TVShows. If no result then please execute "PUT api/shows" First
+            </summary>
+            <param name="PageNumber"></param>
+            <param name="PageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RTLMovieScraper.Controllers.ShowsController.Get(System.Int32)">
+            <summary>
+            Search a specific Show by it's ID. 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RTLMovieScraper.Controllers.ShowsController.InitializeLocalDatabaseAsync">
+            <summary>
+            Initialize the local database. get the shows information from the API and store in the local database
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:RTLMovieScraper.Controllers.ShowsController.getShowsToInsert" -->
+        <member name="M:RTLMovieScraper.DataAccess.MovieScrapperDBContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Override function allowing for adding extra constaints when the models are being created.
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="M:RTLMovieScraper.DataAccess.MovieScrapperDBContext.SaveChanges">
+            <summary>
+            Override function to make changes right before persisting changes to the database.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RTLMovieScraper.DataAccess.MovieScrapperDBContext.updateUpdatedProperty``1">
+            <summary>
+            Function that automatically updates the 'updated_now' property for each updated model.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:RTLMovieScraper.Helpers.ApiHelpers.UpdateCastsAsync(System.Collections.Generic.List{RTLMovieScraper.Models.TVShow})">
+            <summary>
+            Update the cast list in the showlist
+            </summary>
+            <param name="showlist"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RTLMovieScraper.Models.CastFromScraper">
+            <summary>
+            Used only for business purpose
+            </summary>
+        </member>
+        <member name="T:RTLMovieScraper.Models.Cast">
+            <summary>
+            Just for this project i did this. I could have done it better
+            </summary>
+        </member>
+        <member name="T:RTLMovieScraper.Models.PagedList`1">
+            <summary>
+            Generic PeginatedList.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:RTLMovieScraper.Models.TVShow.UpdateShows(System.Collections.Generic.List{RTLMovieScraper.Models.TVShow},RTLMovieScraper.DataAccess.MovieScrapperDBContext)">
+            <summary>
+            Update show list and respective casts as well.
+            </summary>
+            <param name="showlistWithCasts"></param>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>
