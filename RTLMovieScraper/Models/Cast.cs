@@ -16,12 +16,7 @@ namespace RTLMovieScraper.Models
 
     }
 
-    //public class Character
-    //{
-    //    [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-    //    public int id { get; set; }
-    //}
-
+    
     public class Person
     {
         public int id { get; set; }
